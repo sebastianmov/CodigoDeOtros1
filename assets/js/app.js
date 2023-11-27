@@ -1,10 +1,10 @@
 const baseEndpoint = 'https://api.github.com';
-const usersEndpoint = `${baseEndpoint}/users`; // esta linea se puede omitir si se utiliza en la 
+const usersEndpoint = `${baseEndpoint}/users`;
 const $n = document.querySelector('.name'); // Se requiere cambiar el selector a uno de tipo clase
 const $b = document.querySelector('.blog');
 const $l = document.querySelector('.location');
 
-async function displayUser(username) { // Se requiere declarar como una funcion 
+async function displayUser(username) { // Se requiere declarar como una funcion async
   $n.textContent = 'cargando...';
   try { // Se requiere un try - catch
     const response = await fetch(`${usersEndpoint}/${username}`);
